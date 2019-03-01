@@ -1,3 +1,15 @@
+snippet     mobileapi
+abbr        def from_request(...): ...
+options     head
+    from django.http import HttpRequest
+    from rest_framework.decorators import api_view
+    from rest_framework.response import Response
+
+
+    @api_view(["GET"])
+    def from_request(request: HttpRequest) -> Response:
+        return Response({})
+
 snippet     #!
 abbr        #!/usr/bin/env python3
 alias       shebang
